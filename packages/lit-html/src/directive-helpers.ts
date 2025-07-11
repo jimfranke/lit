@@ -245,6 +245,7 @@ export const getCommittedValue = (part: ChildPart) => part._$committedValue;
 export const removePart = (part: ChildPart) => {
   part._$clear();
   part._$startNode.remove();
+  part._$endNode?.remove();
 };
 
 export const clearPart = (part: ChildPart) => {
